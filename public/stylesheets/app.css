@@ -2,22 +2,18 @@ html {
   box-sizing: border-box;
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
 body {
-  background-color: black;
-  color: white;
-  margin: 0;
+  background-color: white;
+  color: black;
+  margin: auto;
   padding: 0;
-  font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
-  font-size: 15px;
-  line-height: 1.33;
+  font-family: 'Lustria', serif;
+  font-size: 18px;
+  line-height: 1.73;
   -webkit-font-smoothing: antialiased;
-  font-weight: bold;
+  font-weight: 400;
+  width: 800px;
+
 }
 
 a {
@@ -27,9 +23,8 @@ a {
 
 img {
   display: inline-block;
-  max-width: 100%;
-  max-height: 100%;
-  vertical-align: bottom;
+  width: 100%;
+  height: 100%;
 }
 
 h1,
@@ -37,52 +32,69 @@ h2,
 h3 {
   font-weight: normal;
   font-size: 100%;
-  margin: 0;
+}
+
+.header {
+  width: 100%;
+  border-bottom: 1px solid black;
 }
 
 .ChannelTitle {
-  margin: 3em;
-  text-align: center;
-  font-weight: bold;
+  height: 40px;
+  width: 200px;
+  background-image: url(../recomposition.i.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-
-.Grid {
-  margin: 5px;
-}
-
-.GridBlock {
-  display: inline-block;
-  /*max-width: 250px;*/
-}
-  .GridBlock > img {
-    opacity: 0;
-    transition: opacity 500ms;
-    background-color: #ccc;
-  }
-    .GridBlock > .img--loaded {
-      opacity: 1;
-    }
 
 .Block {
-  display: flex;
   width: 100%;
-  height: 75vh;
   align-items: center;
   justify-content: center;
   padding: 5px;
+  border-bottom: 1px solid black;
 }
   .Block > img {
     max-width: 100%;
     max-height: 100%;
   }
 
-.BlockMetadata {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 75%;
-  min-height: 25vh;
-  margin: 0 auto;
-  padding: 5px;
+.grid {
+  width: 800px;
+  margin: 5px;
+}
+
+.topo {
+  margin-top: 60px;
+  display: inline-flex;
+
+}
+
+
+.swing {
+  font-family: 'Black Han Sans', sans-serif;
+  text-transform: uppercase;
+  font-size: 30px;
+  float: left;
+  padding-bottom: 60px;
+}
+
+
+.letter {
+  font-size: 20px;
+  width: 85%;
+  float: none;
+  clear: both;
+  padding-left: 70px;
+}
+
+.arrowin {
+  height: 40px;
+  width: 50px;
+  background-image: url(../name.arrow.i.png);
+  background-size: contain;
+  margin-right: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
 }

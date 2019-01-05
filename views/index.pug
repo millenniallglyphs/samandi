@@ -1,14 +1,20 @@
 extends layout
 
 block content
-  h1.ChannelTitle
-    = title
+  div.header
+    h1.ChannelTitle
 
   .Grid
-    each block in helpers.shuffle(contents)
-      if block.image
-        a.GridBlock(
-          href='/blocks/' + block.id
-          style='width: ' + helpers.rand(100, 400) + 'px;'
-        )
-          img(src=block.image.display.url)
+    each block in (contents.reverse())
+      div.topo
+          div.arrowin
+          div.swing= (block.user.first_name + " " + block.user.last_name)
+
+      div.polo
+        if block.content_html
+          div.letter!= (block.content_html)
+        if block.image
+          a.GridBlock(
+              style='width: 100%;'
+            )
+              img(src=block.image.display.url)
